@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[nonatbib]{nips_2016}
+
+\usepackage[breaklinks=true,letterpaper=true,colorlinks,citecolor=black,bookmarks=false]{hyperref}
+
+\usepackage{amsthm}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage[normalem]{ulem}
+
+% use Times
+\usepackage{times}
+% For figures
+\usepackage{graphicx} % more modern
+%\usepackage{epsfig} % less modern
+%\usepackage{subfig} 
+
+\graphicspath{{../fig/}}
+
+\usepackage{tikz}
+\usepackage{tkz-tab}
+\usepackage{caption} 
+\usepackage{subcaption} 
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{arrow} = [very thick,->,>=stealth]
+
+\usepackage{cleveref}
+\usepackage{setspace}
+\usepackage{wrapfig}
+%\usepackage[ruled]{algorithm}
+\usepackage{algpseudocode}
+\usepackage[noend,linesnumbered]{algorithm2e}
+
+\usepackage[disable]{todonotes}
+
+
+\title{Proposal for CS798, 2016 Fall\\ \large Optimization for Machine Learning}
+
+\author{
+	Hemant Saxena \\
+	School of Computer Science\\
+	University of Waterloo\\
+	Waterloo, ON, N2L 3E6 \\
+	\texttt{h2saxena@uwaterloo.ca} \\
+	\And
+	Royal Sequeira\\
+	School of Computer Science\\
+	University of Waterloo\\
+	Waterloo, ON, N2L 3E6 \\
+	\texttt{idonotexist@uwaterloo.ca} \\	
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract} 
+The main idea of the project is to discuss the convergence and accuracy of the accelerated proximal gradient algorithm \cite{apg} over distributed computing framework.
+The project will focus on two types of distributed computing frameworks: bulk synchronous parallel (BSP) systems, and stale sysnchronous parallel (SSP) system.
+The convergence rate and the accuracy over the BSP and SSP systems will be compared against the single node implementation of the algorithm.
+The implementation of the BSP version will be tested over Spark \cite{spark} and for SSP version it will be tested over Petuum \cite{petuum}.
+\end{abstract} 
+
+\section{Introduction}
+Due to the increasing volume of data most of the computation is being parallelized across multiple computing compute nodes.
+This project will discuss the convergence and the accuracy of parallelizing one of the gradient descent algorithm, the accelerated proximal gradient (APG) algorithm.
+APG algorithm is the optimal gradient descent algorithm with respect to convergance rate, which is $O(1/t^2)$ where $t$ is iteration count.
+The parallel implementation of the algorithm will be tested over bulk synchronous parallel (BSP) systems, and stale sysnchronous parallel (SSP) system.
+BSP systems enforces synchronization across worker nodes while progressing through intermediate stages, which makes the system slow due to straggelers.
+On the other hand, SSP systems compromise consistency between workers and allow them to operate asynchronously, which makes the system fast but with bounded errors.
+
+The project is motivated by the recent interest parallelizing gradient descent algorithms.
+In one of the recent works \cite{zhou2016convergence} authors discussed the parallel implementation of proximal gradient algorithm.
+Following that work, the next natural step to test the parallel implementation of the APG algorithm.
+
+\section{Related Works}
+The work on Stale Synchronous can be broadly divided into two major sets: 
+(i) SSP systems, where individual machines skip updates while solving an optimization 
+problem \cite{feyzmahdavian2014convergence,bertsekas1989convergence,bertsekas1989parallel,tseng1991rate,tsitsiklis1984distributed}. 
+(ii) SSP systems, where machines do not allowed skip 
+updates \cite{li2014scaling,li2013distributed,li2013parameter,feyzmahdavian2014delayed,ho2013more}.
+
+Early research in this field, however, started in the late 
+1980s \cite{bertsekas1989convergence,bertsekas1989parallel,tseng1991rate,tsitsiklis1984distributed}. 
+Recently, Zhou et al proposed \textbf{msPG}, 
+an extension to the proximal gradient algorithm to the model parallel and stale synchronous setting\cite{zhou2016convergence}. 
+The authors showed that \textbf{msPG} converges to a critical point under mild assumptions 
+and such a critical point is optimal under convexity assumptions.
+
+\section{Proposed Work}
+We divide the work into three subtasks: first, implement parallel APG for Spark, second, implement parallel APG for Petuum, 
+third, compare the performance of both the implementations with respect to a single node implementation.
+We will test the APG algorithm over a non-convex Lasso problem.
+The data will be generated from $\mathcal{N}(0,1)$ withe normalized columns.
+ 
+\section{Team}
+Hemant: APG implementation for Spark.
+Royal: APG implementation for Petuum.
+Experiments will be designed and conducted jointly.
+
+\section*{Acknowledgement}
+We would like to thank Professor Yaoliang Yu to provide the idea for this project.
+
+\bibliographystyle{unsrtnat}
+\bibliography{proposal}
+
+\end{document}\grid

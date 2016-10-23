@@ -1,0 +1,116 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Beck and Teboulle(2009)]{apg}
+Amir Beck and Marc Teboulle.
+\newblock Fast gradient-based algorithms for constrained total variation image
+  denoising and deblurring problems.
+\newblock \emph{IEEE Transactions on Image Processing}, 18\penalty0
+  (11):\penalty0 2419--2434, 2009.
+
+\bibitem[Zaharia et~al.(2010)Zaharia, Chowdhury, Franklin, Shenker, and
+  Stoica]{spark}
+Matei Zaharia, Mosharaf Chowdhury, Michael~J. Franklin, Scott Shenker, and Ion
+  Stoica.
+\newblock Spark: Cluster computing with working sets.
+\newblock In \emph{Proceedings of the 2Nd USENIX Conference on Hot Topics in
+  Cloud Computing}, HotCloud'10, pages 10--10, Berkeley, CA, USA, 2010. USENIX
+  Association.
+\newblock URL \url{http://dl.acm.org/citation.cfm?id=1863103.1863113}.
+
+\bibitem[Xing et~al.(2015)Xing, Ho, Dai, Kim, Wei, Lee, Zheng, Xie, Kumar, and
+  Yu]{petuum}
+Eric~P. Xing, Qirong Ho, Wei Dai, Jin-Kyu Kim, Jinliang Wei, Seunghak Lee, Xun
+  Zheng, Pengtao Xie, Abhimanu Kumar, and Yaoliang Yu.
+\newblock Petuum: A new platform for distributed machine learning on big data.
+\newblock In \emph{Proceedings of the 21th ACM SIGKDD International Conference
+  on Knowledge Discovery and Data Mining}, KDD '15, pages 1335--1344, New York,
+  NY, USA, 2015. ACM.
+\newblock ISBN 978-1-4503-3664-2.
+\newblock \doi{10.1145/2783258.2783323}.
+\newblock URL \url{http://doi.acm.org/10.1145/2783258.2783323}.
+
+\bibitem[Zhou et~al.(2016)Zhou, Yu, Dai, Liang, and Xing]{zhou2016convergence}
+Yi~Zhou, Yaoliang Yu, Wei Dai, Yingbin Liang, and Eric~P Xing.
+\newblock On convergence of model parallel proximal gradient algorithm for
+  stale synchronous parallel system.
+\newblock \emph{algorithms}, 6\penalty0 (11):\penalty0 18, 2016.
+
+\bibitem[Feyzmahdavian and Johansson(2014)]{feyzmahdavian2014convergence}
+Hamid~Reza Feyzmahdavian and Mikael Johansson.
+\newblock On the convergence rates of asynchronous iterations.
+\newblock In \emph{53rd IEEE Conference on Decision and Control}, pages
+  153--159. IEEE, 2014.
+
+\bibitem[Bertsekas and
+  Tsitsiklis(1989{\natexlab{a}})]{bertsekas1989convergence}
+Dimitri~P Bertsekas and John~N Tsitsiklis.
+\newblock Convergence rate and termination of asynchronous iterative
+  algorithms.
+\newblock In \emph{Proceedings of the 3rd international conference on
+  Supercomputing}, pages 461--470. ACM, 1989{\natexlab{a}}.
+
+\bibitem[Bertsekas and Tsitsiklis(1989{\natexlab{b}})]{bertsekas1989parallel}
+Dimitri~P Bertsekas and John~N Tsitsiklis.
+\newblock \emph{Parallel and distributed computation: numerical methods},
+  volume~23.
+\newblock Prentice hall Englewood Cliffs, NJ, 1989{\natexlab{b}}.
+
+\bibitem[Tseng(1991)]{tseng1991rate}
+Paul Tseng.
+\newblock On the rate of convergence of a partially asynchronous gradient
+  projection algorithm.
+\newblock \emph{SIAM Journal on Optimization}, 1\penalty0 (4):\penalty0
+  603--619, 1991.
+
+\bibitem[Tsitsiklis et~al.(1984)Tsitsiklis, Bertsekas, and
+  Athans]{tsitsiklis1984distributed}
+John~N Tsitsiklis, Dimitri~P Bertsekas, and Michael Athans.
+\newblock Distributed asynchronous deterministic and stochastic gradient
+  optimization algorithms.
+\newblock In \emph{1984 American Control Conference}, pages 484--489, 1984.
+
+\bibitem[Li et~al.(2014)Li, Andersen, Park, Smola, Ahmed, Josifovski, Long,
+  Shekita, and Su]{li2014scaling}
+Mu~Li, David~G Andersen, Jun~Woo Park, Alexander~J Smola, Amr Ahmed, Vanja
+  Josifovski, James Long, Eugene~J Shekita, and Bor-Yiing Su.
+\newblock Scaling distributed machine learning with the parameter server.
+\newblock In \emph{11th USENIX Symposium on Operating Systems Design and
+  Implementation (OSDI 14)}, pages 583--598, 2014.
+
+\bibitem[Li et~al.(2013{\natexlab{a}})Li, Andersen, and
+  Smola]{li2013distributed}
+Mu~Li, David~G Andersen, and Alexander Smola.
+\newblock Distributed delayed proximal gradient methods.
+\newblock In \emph{NIPS Workshop on Optimization for Machine Learning},
+  2013{\natexlab{a}}.
+
+\bibitem[Li et~al.(2013{\natexlab{b}})Li, Zhou, Yang, Li, Xia, Andersen, and
+  Smola]{li2013parameter}
+Mu~Li, Li~Zhou, Zichao Yang, Aaron Li, Fei Xia, David~G Andersen, and Alexander
+  Smola.
+\newblock Parameter server for distributed machine learning.
+\newblock In \emph{Big Learning NIPS Workshop}, volume~6, page~2,
+  2013{\natexlab{b}}.
+
+\bibitem[Feyzmahdavian et~al.(2014)Feyzmahdavian, Aytekin, and
+  Johansson]{feyzmahdavian2014delayed}
+Hamid~Reza Feyzmahdavian, Arda Aytekin, and Mikael Johansson.
+\newblock A delayed proximal gradient method with linear convergence rate.
+\newblock In \emph{2014 IEEE International Workshop on Machine Learning for
+  Signal Processing (MLSP)}, pages 1--6. IEEE, 2014.
+
+\bibitem[Ho et~al.(2013)Ho, Cipar, Cui, Lee, Kim, Gibbons, Gibson, Ganger, and
+  Xing]{ho2013more}
+Qirong Ho, James Cipar, Henggang Cui, Seunghak Lee, Jin~Kyu Kim, Phillip~B
+  Gibbons, Garth~A Gibson, Greg Ganger, and Eric~P Xing.
+\newblock More effective distributed ml via a stale synchronous parallel
+  parameter server.
+\newblock In \emph{Advances in neural information processing systems}, pages
+  1223--1231, 2013.
+
+\end{thebibliography}
