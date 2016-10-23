@@ -57,7 +57,7 @@
 
 \begin{abstract} 
 The main idea of the project is to discuss the convergence and accuracy of the accelerated proximal gradient algorithm \cite{apg} over distributed computing framework.
-The project will focus on two types of distributed computing frameworks: bulk synchronous parallel (BSP) systems, and stale sysnchronous parallel (SSP) system.
+The project will focus on two types of distributed computing frameworks: bulk synchronous parallel (BSP) systems, and stale synchronous parallel (SSP) system.
 The convergence rate and the accuracy over the BSP and SSP systems will be compared against the single node implementation of the algorithm.
 The implementation of the BSP version will be tested over Spark \cite{spark} and the SSP version will be tested over Petuum \cite{petuum}.
 \end{abstract} 
@@ -65,9 +65,9 @@ The implementation of the BSP version will be tested over Spark \cite{spark} and
 \section{Introduction}
 Due to the increasing volume of data most of the computation is being parallelized across multiple computing compute nodes.
 This project will discuss the convergence and the accuracy of parallelizing one of the gradient descent algorithms, the accelerated proximal gradient(APG) algorithm.
-APG algorithm is the optimal gradient descent algorithm with respect to convergance rate, which is $O(1/t^2)$ where $t$ is iteration count.
-The parallel implementation of the algorithm will be tested over bulk synchronous parallel (BSP) systems, and stale sysnchronous parallel (SSP) system.
-BSP systems enforces synchronization across worker nodes while progressing through intermediate stages, which makes the system slow due to straggelers.
+APG algorithm is the optimal gradient descent algorithm with respect to convergence rate, which is $O(1/t^2)$ where $t$ is iteration count.
+The parallel implementation of the algorithm will be tested over bulk synchronous parallel (BSP) systems, and stale synchronous parallel (SSP) system.
+BSP systems enforces synchronization across worker nodes while progressing through intermediate stages, which makes the system slow due to stragglers.
 On the other hand, SSP systems compromise consistency between workers and allow them to operate asynchronously, which makes the system fast but with bounded errors.
 
 The project is motivated by the recent interest in parallelizing gradient descent algorithms.
