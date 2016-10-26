@@ -1,3 +1,5 @@
 *.aux
 *.log
 *.blg
+spark-impl/scala/project/
+spark-impl/scala/target/
